@@ -1,1 +1,346 @@
+<trabajo html>
 
+    <html lang="es">
+     <head>
+      <meta charset="utf-8"/>
+      <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+      <title>
+       Mi Página Personal
+      </title>
+      <script src="https://cdn.tailwindcss.com">
+      </script>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+      <style>
+       body {
+                font-family: 'Roboto', sans-serif;
+            }
+            .gallery {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 16px;
+            }
+            .gallery-item {
+                position: relative;
+                overflow: hidden;
+            }
+            .gallery-item img {
+                width: 100%;
+                height: auto;
+                transition: transform 0.3s ease;
+            }
+            .gallery-item:hover img {
+                transform: scale(1.1);
+            }
+            .gallery-item .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+            .gallery-item:hover .overlay {
+                opacity: 1;
+            }
+            .fade-in {
+                animation: fadeIn 1s ease-in-out;
+            }
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+      </style>
+     </head>
+     <body class="bg-gray-100 text-gray-800 font-roboto">
+        <div class="overflow-hidden">
+            <img alt="Imagen de encabezado Besy" class="w-full h-[650px] object-cover transform transition-transform duration-500 hover:scale-110" height="650" src="portada.jpg" width="1024"/>
+        </div>
+        <header class="bg-gray-600 text-white p-4">
+         <div class="container mx-auto flex justify-between items-center">
+          <h1 class="text-2xl font-bold">
+         BETSY
+        </h1>
+        <nav>
+         <ul class="flex space-x-4">
+          <li>
+           <a class="hover:underline" href="#sobre-mi">
+            Yo
+           </a>
+          </li>
+          <li>
+            <a class="hover:underline" href="#materias-curso">
+                Materias en Curso
+               </a>
+              </li>
+        
+          <li>
+           <a class="hover:underline" href="#materias-cursadas">
+            Materias Cursadas
+           </a>
+          </li>
+          <li>
+           
+            <a class="hover:underline" href="#pasatiempos">
+             Más sobre mí
+            </a>
+           </li>
+           <li>
+           <a class="hover:underline" href="#amigos">
+            Amigos
+           </a>
+          </li>
+          <li>
+           <a class="hover:underline" href="#mascotas">
+            Mascotas
+           </a>
+          </li>
+          
+          
+         </ul>
+        </nav>
+       </div>
+      </header>
+      <main class="container mx-auto mt-8">
+       <section class="mb-8" id="sobre-mi">
+        <h2 class="text-3xl font-bold mb-4">
+         Yo
+        </h2>
+        <div class="bg-white p-4 rounded shadow flex flex-col md:flex-row items-center">
+         <img alt="Foto de perfil" class="w-48 h-48 object-cover rounded-full mb-4 md:mb-0 md:mr-4" height="200" src="foto.jpeg" width="200"/>
+         <div>
+          <p class="text-lg">
+           ¡Hola! Soy Betsy. 
+          </p>
+          <p class="text-lg mt-2">
+           Soy estudiantes de  Ciencia de la computación  en la Universidad Católica San Pablo.
+          </p>
+           <p class="text-lg mt-4">
+            Correo: betsy.ortiz@ucsp.edu.pe
+           </p>
+         </div>
+        </div>
+       </section>
+       <section class="mb-8" id="materias-curso">
+        <h2 class="text-3xl font-bold mb-4">
+         Materias en Curso
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+         <div class="bg-white p-4 rounded-lg shadow-md">
+          <img alt="Imagen cc1" class="w-full h-40 object-cover rounded-t-lg" height="200" src= "logoC++.jpg" width="300"/>
+          <h3 class="text-xl font-semibold mt-4">
+           Ciencia de la computación I
+          </h3>
+         </div>
+         <div class="bg-white p-4 rounded-lg shadow-md">
+          <img alt="icc" class="w-full h-40 object-cover rounded-t-lg" height="200" src="icc.jpg" width="300"/>
+          <h3 class="text-xl font-semibold mt-4">
+           Introducción a la Ciencia de la computación
+          </h3>
+          
+         </div>
+         <div class="bg-white p-4 rounded-lg shadow-md">
+          <img alt="ed" class="w-full h-40 object-cover rounded-t-lg" height="200" src="ed.jpeg" width="300"/>
+          <h3 class="text-xl font-semibold mt-4">
+            Estructuras Discretas II
+          </h3>
+          
+         </div>
+         <div class="bg-white p-4 rounded-lg shadow-md">
+          <img alt="Matemáticas" class="w-full h-40 object-cover rounded-t-lg" height="200" src="mat.jpg" width="300"/>
+          <h3 class="text-xl font-semibold mt-4">
+           Cálculo I
+          </h3>
+         </div>
+         <div class="bg-white p-4 rounded-lg shadow-md">
+          <img alt="Cálculo" class="w-full h-40 object-cover rounded-t-lg" height="200" src= "mat1.jpg" width="300"/>
+          <h3 class="text-xl font-semibold mt-4">
+           Matemática II
+          </h3>
+    
+         </div>
+         <div class="bg-white p-4 rounded-lg shadow-md">
+          <img alt="filo" class="w-full h-40 object-cover rounded-t-lg" height="200" src= "filo.jpg" width="300"/>
+          <h3 class="text-xl font-semibold mt-4">
+           Introducción a la Filosofía
+          </h3>
+    
+         </div>
+         <div class="bg-white p-4 rounded-lg shadow-md">
+          <img alt="pmf" class="w-full h-40 object-cover rounded-t-lg" height="200" src="pmf.jpg" width="300"/>
+          <h3 class="text-xl font-semibold mt-4">
+           Persona, Matrimonio y Familia
+          </h3>
+    
+       </section>
+       <section class="mb-8" id="materias-cursadas">
+        <h2 class="text-3xl font-bold mb-4">
+         Materias Cursadas
+        </h2>
+        <div class="container mx-auto">
+         <ul class="space-y-4">
+          <li class="bg-white rounded-lg shadow-md p-4 fade-in">
+           <h2 class="text-xl font-bold mb-2">
+            Matemáticas I
+           </h2>
+          </li>
+          <li class="bg-white rounded-lg shadow-md p-4 fade-in">
+           <h2 class="text-xl font-bold mb-2">
+            Programación de Videojuegos
+           </h2>
+          </li>
+          <li class="bg-white rounded-lg shadow-md p-4 fade-in">
+           <h2 class="text-xl font-bold mb-2">
+            Estructuras Discretas I
+           </h2>
+          </li>
+          <li class="bg-white rounded-lg shadow-md p-4 fade-in">
+           <h2 class="text-xl font-bold mb-2">
+            Comunicación
+           </h2>
+          </li>
+          <li class="bg-white rounded-lg shadow-md p-4 fade-in">
+           <h2 class="text-xl font-bold mb-2">
+            Introducción a la vida universitaria
+           </h2>
+          </li>
+          <li class="bg-white rounded-lg shadow-md p-4 fade-in">
+           <h2 class="text-xl font-bold mb-2">
+            Metodología del Estudio
+           </h2>
+          </li>
+         </ul>
+        </div>
+       </section>
+       <section class="mb-8" id="pasatiempos">
+        <h2 class="text-3xl font-bold mb-4">
+         Más sobre mí
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+         <div class="bg-white p-4 rounded shadow">
+          <img alt="Logo de safe animals" class="w-full h-48 object-cover rounded mb-4" height="200" src="refugio.jpg" width="300"/>
+          <h3 class="text-xl font-bold">
+           INTEGRANTE DE SAFE ANIMALS
+          </h3>
+        
+          <p>
+            <br/>
+           Desde los 15 años soy voluntaria en un albergue de perritos llamado "SAFE ANIMALS".
+          </p>
+         </div>
+         <div class="bg-white p-4 rounded shadow">
+          <img alt="foto gatos" class="w-full h-48 object-cover rounded mb-4" height="200" src="gatos.jpg" width="300"/>
+          <h3 class="text-xl font-bold">
+           RESCATISTA
+          </h3>
+          
+          <p>
+           A los 16 años de manera independiente empecé a rescatar gatos (sobre todo adultos), en estado de abandono o de peligro. Me encargué del rescate, rehabilitación y proceso de adopción de cada uno.
+        </p>
+         </div>
+         
+       </section>
+       <section class="mb-8" id="amigos">
+        <h2 class="text-3xl font-bold mb-4">
+         Amigos (Las Princesas)
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+         <div class="bg-white p-4 rounded shadow flex flex-col items-center">
+          <img alt="Foto de Paolo" class="w-full h-96 object-cover rounded mb-4" height="384" src="paolo.jpeg" width="300"/>
+          <h3 class="text-xl font-bold">
+           Paolo Gomez
+          </h3>
+          <p>
+           (La tía Paola)
+          </p>
+         </div>
+         <div class="bg-white p-4 rounded shadow flex flex-col items-center">
+          <img alt="Foto de Drovich" class="w-full h-96 object-cover rounded mb-4" height="384" src="Drovivh.jpeg" width="300"/>
+          <h3 class="text-xl font-bold">
+           Ivan Gonzales
+          </h3>
+          <p>
+           (Drovich)
+          </p>
+         </div>
+         
+        </div>
+       </section>
+       <section class="mb-8" id="mascotas">
+        <h2 class="text-3xl font-bold mb-4">
+         Mascotas
+        </h2>
+        <div class="gallery">
+         <div class="gallery-item">
+          <img alt="Foto de Riki, gato drogadicto" height="300" src="riki.jpeg" width="400"/>
+          <div class="overlay">
+           Riki
+          </div>
+         </div>
+         <div class="gallery-item">
+          <img alt="Foto de blanquita, una gata negra" height="300" src="blanquita.jpeg" width="400"/>
+          <div class="overlay">
+           Blanquita
+          </div>
+         </div>
+         <div class="gallery-item">
+          <img alt="Foto de maximiliano, un gato que parece perro" height="300" src="maximiliano.jpeg" width="400"/>
+          <div class="overlay">
+           Maximiliano
+          </div>
+         </div>
+         <div class="gallery-item">
+          <img alt="Foto de Jamonada, una gata que comenzo llamandose Ramona" height="300" src="jamonada.jpeg" width="400"/>
+          <div class="overlay">
+           Jamonada
+          </div>
+         </div>
+         <div class="gallery-item">
+          <img alt="Foto de Bobby, un perro tan joven como la dueña" height="300" src="bobby.jpeg" width="400"/>
+          <div class="overlay">
+           Bobby
+          </div>
+         </div>
+         <div class="gallery-item">
+          <img alt="Foto de Bobby, un perro tan joven como la dueña" height="300" src="pedro.jpeg" width="400"/>
+          <div class="overlay">
+           Pedro
+          </div>
+         </div>
+         <div class="gallery-item">
+          <img alt="Foto de Xuxu, la capibara" height="300" src="xuxu.jpeg" width="400"/>
+          <div class="overlay">
+           Xuxu
+          </div>
+         </div>
+         <div class="gallery-item">
+          <img alt="Foto de mya, la chiki" height="300" src="mya.jpeg" width="400"/>
+          <div class="overlay">
+           Mya
+          </div>
+         </div>
+        </div>
+       </section>
+       
+       
+       
+      </main>
+      <footer class="bg-gray-600 text-white p-4">
+       <div class="container mx-auto text-center">
+        <p>
+         © Besy. Todos los derechos reservados.
+        </p>
+       </div>
+      </footer>
+     </body>
+    </html>
